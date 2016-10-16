@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Test Project</title>
+    <link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet'>
+    <link rel='stylesheet' href='css/main.css'>
+    <script src='https://code.jquery.com/jquery-2.2.0.min.js'></script>
+    <script src='node_modules/jquery-modal/jquery.modal.js' type='text/javascript' charset='utf-8'></script>
+    <link rel='stylesheet' href='node_modules/jquery-modal/jquery.modal.css' type='text/css' media='screen' />
+    <script src='https://use.fontawesome.com/399a66286d.js'></script>
+</head>
+<body>
+    <header>
+        <div class='container'>
+            <nav class='nav-box'>
+                <div class='row'>
+                    <div class='nav-first-row-left col-4'>
+                        <h1 class='nav-heading'>questions</h1>
+                        <i class='fa fa-plus-circle nav-button-blue' aria-hidden='true'></i>
+                    </div>
+                    <div class='nav-first-row-middle col-5'>
+                        <form class='nav-form-options'>
+                            <input class='nav-option' type='radio' name= 'my-shelf' value='my-shelf'> My shelf</input>
+                            <input class='nav-option' type='radio' name= 'all-questions' value='all-questions'> All questions</input>
+                        </form>
+                    </div>
+                    <div class='nav-first-row-right col-3'>
+                        <p class='nav-sorting'>Sort by: <span class='italic-text'><a class='nav-button-recent' href=''>recent </a></span>or <span class='italic-text'><a  class='nav-button-recent' href=''>hot </a></span></p>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='nav-second-row-left col-9'>
+                        <input class='nav-search-questions' type='text' value='' placeholder='Search questions'>
+                    </div>
+                    <div class='nav-second-row-right col-3'>
+                        <a href=''><div class='nav-button-search'>search</div></a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <section class='background-color-box'>
+        <div class='container shadow-box'>
+            <div class='row'>
+                <div class='question-header col-9'>
+                    <div class='row'>
+                        <div class='asking-person-img-box col-2'>
+                            <a href='#modal' rel='modal:open'>
+                                <img class='asking-person-img' src='images/mperson1.png' alt='asking person'>
+                            </a>
+                        </div>
+                        <div class='question-details col-10'>
+                            <p class='asking-person-name'><a class='modal-link' href='#modal' rel='modal:open'>Eva</a> <span class='uppercase-text'>is asking:</span></p>
+                            <h2 class='topic-name'>Will insulin make my patient gain weight?</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class='question-right-bar-hide col-3'></div>
+            </div>
+            <div class='row'>
+                <div class='commenting-people col-9'>
+                    <div class='row'>
+                        <div class='lightblue-box col-2'>
+                            <p class='commenting-people-label'>asked</p>
+                        </div>
+                        <div class='more-activities-box count-box col-2'>
+                            <p class='more-activities-nr'>3</p>
+                            <p class='more-activities-text'>more<br> activities</p>
+                            <div class='more-activities-circle-container'>
+                                <div class='more-activities-circle'></div>
+                            </div>
+                        </div>
+                        <div class='more-activities-box col-2'>
+                            <div class='more-activities-content'>
+                                <img class='commenting-person-img' src='images/person1.png' alt='commenting person one'>
+                                <p class='more-activities-text'>commented</p>
+                                <div class='more-activities-circle-container'>
+                                    <div class='more-activities-circle'></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='more-activities-box col-2'>
+                            <div class='more-activities-content'>
+                                <img class='commenting-person-img' src='images/person2.png' alt='commenting person two'>
+                                <p class='more-activities-text'>commented</p>
+                                <div class='more-activities-circle-container'>
+                                    <div class='more-activities-circle'></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='more-activities-box col-2'>
+                            <div class='more-activities-content'>
+                                <img class='commenting-person-img' src='images/person3.png' alt='commenting person three'>
+                                <p class='more-activities-text'>commented</p>
+                                <div class='more-activities-circle-container'>
+                                    <div class='more-activities-circle'></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='more-activities-box col-2'>
+                            <div class='more-activities-content'>
+                                <img class='commenting-person-img' src='images/person4.png' alt='commenting person four'>
+                                <p class='more-activities-text'>commented</p>
+                                <div class='more-activities-circle-container'>
+                                    <div class='more-activities-circle'></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class='question-right-bar col-3'>
+                    <p class='right-bar-statics'>1 <span class='italic-text'>related discussion</span></p>
+                    <p class='right-bar-statics'>6 <span class='italic-text'>peers involved</span></p>
+                    <p class='right-bar-statics'>3 <span class='italic-text'>conversations</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class='question-list background-color-box'>
+        <div class='container shadow-box'>
+            <div class='row'>
+                <div class='question-header col-9'>
+                    <div class='row'>
+                        <div class='asking-person-img-box col-2'>
+                            <a href='#modal' rel='modal:open'>
+                                <img class='asking-person-img' src='images/person6.png' alt='asking person'>
+                            </a>
+                        </div>
+                        <div class='question-details col-10'>
+                            <p class='asking-person-name'><a class='modal-link' href='#modal' rel='modal:open'>Andrew </a><span class='uppercase-text'>is asking:</span></p>
+                            <h2 class='topic-name'>Vegan diet in diabetes treatment?</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class='question-right-bar col-3'></div>
+            </div>
+            <div class='row'>
+                <div class='commenting-people col-9'>
+                    <div class='lightblue-box col-2'>
+                        <p class='commenting-people-label'>asked</p>
+                    </div>
+                    <div class='more-activities-box count-box col-2'>
+                        <p class='more-activities-nr'>6</p>
+                        <p class='more-activities-text'>more<br> activities</p>
+                        <div class='more-activities-circle-container'>
+                            <div class='more-activities-circle'></div>
+                        </div>
+                    </div>
+                    <div class='more-activities-box col-2'>
+                        <div class='more-activities-content'>
+                            <img class='commenting-person-img' src='images/person3.png' alt='commenting person one'>
+                            <p class='more-activities-text'>commented</p>
+                            <div class='more-activities-circle-container'>
+                                <div class='more-activities-circle'></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='more-activities-box col-2'>
+                        <div class='more-activities-content'>
+                            <img class='commenting-person-img' src='images/person4.png' alt='commenting person one'>
+                            <p class='more-activities-text'>commented</p>
+                            <div class='more-activities-circle-container'>
+                                <div class='more-activities-circle'></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='more-activities-box col-2'>
+                        <div class='more-activities-content'>
+                            <img class='commenting-person-img' src='images/person5.png' alt='commenting person one'>
+                            <p class='more-activities-text'>commented</p>
+                            <div class='more-activities-circle-container'>
+                                <div class='more-activities-circle'></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='more-activities-box col-2'>
+                        <div class='more-activities-content'>
+                            <img class='commenting-person-img' src='images/person2.png' alt='commenting person one'>
+                            <p class='more-activities-text'>commented</p>
+                            <div class='more-activities-circle-container'>
+                                <div class='more-activities-circle'></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class='question-right-bar col-3'>
+                    <p class='right-bar-statics'>2 <span class='italic-text'>related discussion</span</p>
+                    <p class='right-bar-statics'>9 <span class='italic-text'>peers involved</span</p>
+                    <p class='right-bar-statics'>5 <span class='italic-text'>conversations</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class='question-list background-color-box'>
+        <div class='container shadow-box'>
+            <div class='row'>
+                <div class='question-header col-9'>
+                    <div class='row'>
+                        <div class='asking-person-img-box col-2'>
+                            <a href='#modal' rel='modal:open'>
+                                <img class='asking-person-img' src='images/person4.png' alt='asking person'>
+                            </a>
+                        </div>
+                        <div class='question-details col-10'>
+                            <p class='asking-person-name'><a class='modal-link' href='#modal' rel='modal:open'>Joseph </a><span class='uppercase-text'>is asking:</span></p>
+                            <h2 class='topic-name'>Vegan diet to stop diabetes progress</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class='question-right-bar col-3'></div>
+            </div>
+            <div class='row'>
+                <div class='commenting-people col-9'>
+                    <div class='lightblue-box col-2'>
+                        <p class='commenting-people-label'>asked</p>
+                    </div>
+                    <div class='more-activities-box col-2'>
+                        <div class='more-activities-content'>
+                            <img class='commenting-person-img' src='images/person5.png' alt='commenting person one'>
+                            <p class='more-activities-text'>commented</p>
+                            <div class='more-activities-circle-container'>
+                                <div class='more-activities-circle'></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='more-activities-box col-2'>
+                        <div class='more-activities-content'>
+                            <img class='commenting-person-img' src='images/person2.png' alt='commenting person one'>
+                            <p class='more-activities-text'>commented</p>
+                            <div class='more-activities-circle-container'>
+                                <div class='more-activities-circle'></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='more-activities-box col-2'>
+                        <div class='more-activities-content'>
+                            <img class='commenting-person-img' src='images/mperson1.png' alt='commenting person one'>
+                            <p class='more-activities-text'>commented</p>
+                            <div class='more-activities-circle-container'>
+                                <div class='more-activities-circle'></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='more-activities-box col-2'></div>
+                </div>
+                <div class='question-right-bar col-3'>
+                    <p class='right-bar-statics'>5 <span class='italic-text'>related discussion</span></p>
+                    <p class='right-bar-statics'>4 <span class='italic-text'>peers involved</span></p>
+                    <p class='right-bar-statics'>9 <span class='italic-text'>conversations</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class='footer-load-more'>
+        <div class='background-color-box'>
+            <div class='container shadow-box'>
+                <p class='footer-text'>load more questions</p>
+            </div>
+        </div>
+    </footer>
+    <div id='modal' class='profile-modal'>
+        <section>
+            <div class='container'>
+                <div class='row'>
+                    <div class='col-12'>
+                        <img class='profile-img' src='images/halima.png' alt='profile image'>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='col-12'>
+                        <p class='profile-person-name'>Dr Halima</p>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='profile-person-info col-4'>
+                        <p class='info info-left'>MEMBER FOR <span class='bold'>5 months</span></p>
+                    </div>
+                    <div class='profile-person-info col-4'>
+                        <p class='info info-middle'>LAST SEEN <span class='bold'>Saturday afternoon</span></p>
+                    </div>
+                    <div class='profile-person-info col-4'>
+                        <p class='info info-right col-9'>ACTIVITY LEVEL</p>
+                        <img class='info info-right activity-level col-3' src='images/activity_level.png' alt='activity level'>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class='container'>
+                <div class='row'>
+                    <div class='profile-main-caption col-12'>
+                        <i class='fa fa-chevron-circle-left arrow' aria-hidden='true'></i>
+                        <p class='main-text'>How it all started</p>
+                        <i class='fa fa-chevron-circle-right arrow' aria-hidden='true'></i>
+                    </div>
+                </div>
+                <div class='row'>
+                    <p class='profile-title'>that's where we have been these 5 months ago</p>
+                </div>
+                <div class='row'>
+                    <div class='profile-squares col-12'>
+                        <div class='peers-square square'>
+                            <div class='content-square'>
+                                <p>46 <span class='italic-text'>peers</span></p>
+                            </div>
+                        </div>
+                        <div class='discussions-square square'>
+                            <div class='content-square'>
+                                <p>29 <span class='italic-text'>discussions</span></p>
+                            </div>
+                        </div>
+                        <div class='findings-square square'>
+                            <div class='content-square'>
+                                <p>19 <span class='italic-text'>findings</span></p>
+                            </div>
+                        </div>
+                        <div class='questions-square square'>
+                            <div class='content-square'>
+                                <p>10 <span class='italic-text'>questions</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class='row'>
+                    <p class='profile-title'>who joined the platform that same period</p>
+                </div>
+                <div class='row'>
+                    <div class='three-img-boxes col-12'>
+                        <div class='box-column'>
+                            <div class='img-box'>
+                                <img class='three-img' src='images/sen.png'>
+                            </div>
+                            <p class='img-label'>S.E.N <br>Daweru</br></p>
+                        </div>
+                        <div class='box-column'>
+                            <div class='img-box'>
+                                <img class='three-img' src='images/person2.png'>
+                            </div>
+                            <p class='img-label'>Patricia</p>
+                        </div>
+                        <div class='box-column'>
+                            <div class='img-box'>
+                                <img class='three-img' src='images/person4.png'>
+                            </div>
+                            <p class='img-label'>Joseph <br>Aluoch</br></p>
+                        </div>
+                    </div>
+                </div>
+                <div class='row'>
+                    <p class='profile-title'>the hottest discussion these days</p>
+                </div>
+            </div>
+            <div class='striped-part col-12'>
+                <div class='striped-container container'>
+                    <div class='row'>
+                        <img class='striped-part-img' src='images/andrew.png' alt='hottest discussion initiator picture'>
+                        <p class='asking-person-name'>Andrew <span class='uppercase-text'>found the guardian article</span></p>
+                        <p class='topic-name'>Vegan diet to stop diabetes progress</p>
+                    </div>
+                    <div class='row'>
+                        <div class='striped-topic-statics col-12'>
+                            <p class='topic-statics'>6 <span class='italic-text'>peers involved</span></p>
+                            <p class='topic-statics'>3 <span class='italic-text'>related discussions</span></p>
+                            <p class='topic-statics'>3 <span class='italic-text'>conversations</span></p>
+                            <p class='topic-statics'>3 <span class='italic-text'>upvotes</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
