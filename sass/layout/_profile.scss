@@ -35,9 +35,6 @@
         .info {
             line-height: 39px;
             font-size: 16px;
-            .bold {
-                font-weight: bold;
-            }
         }
         .info-left {
             text-align: left;
@@ -97,10 +94,16 @@
             @include mobile {
                 margin: 0 3px 0 5px;
             }
+            @include tablet {
+                margin: 0 3px 0 5px;
+            }
         }
         .fa-chevron-circle-right {
             @include mobile {
                 margin: 0 5px 0 3px;
+            }
+            @include tablet {
+                margin: 0 3px 0 5px;
             }
         }
         .main-text {
@@ -209,7 +212,6 @@
         .striped-container {
             background: repeating-linear-gradient(45deg, #ededed, #ededed 3px, #e9e9e9 3px, #e9e9e9 7px);
             background-size: cover;
-            position: relative;
             .striped-part-img {
                 margin: -25px auto;
                 border-radius: 50%;
